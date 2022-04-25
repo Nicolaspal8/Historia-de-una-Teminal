@@ -74,13 +74,13 @@ podremos volver a continuar su ejecución.
 GNOME.
 + **Tab** : autocompleta comandos o rutas de directorios o archivos.
 30. **kill -9 [PID]**: Elimina el proceso por una id especificada, tambien se puede hacer tecleando la tecla k al estar en el proceso de top y nos pide el PID y en base a eso podemos acabar con un proceso
-31. ** **
-32. ** **
-33. ** **
-34. ** **
-35. ** **
-36. ** **
-37. ** **
-38. ** **
-39. ** **
+31. **ls -lh *.[extension del archivo como .php o .txt etc]** : Lista los archivos que tengan la extension indicada
+32. **grep [Archivo dondee buscaremos] -e "Expresion a buscar"**: Global Regular expresion, busca dentro de un archivo todos los que contengan la expresion indicada, y la salida o resultado tambien se puede guardar en algun tipo de archivo indicado aparte de solo mostrarlo por la consola
+33. **grep [Archivo dondee buscaremos] -e "Expresion a buscar" > [nombre de archivo nuevo.extension]** : Guarda la busqueda en un archivo, la busqueda sencible a minusculas o mayusculas pero podemos especificar eso con una expresion regular -i (insensitive)
+34. **grep -i [Archivo dondee buscaremos] -e "Expresion a buscar"** : Busqueda insensible a mayusculas o minusculas
+35. **grep -i -n [Archivo dondee buscaremos] -e "Expresion a buscar"**: Lista las lineas indicando el numero de donde se encuentra nuestra busqueda
+36. **date; grep -i -n [Archivo donde buscaremos] -e "Expresion a buscar" date;** : primero ejecuta date luego la busqueda y luego date de nuevo y asi sabremos cuanto tardo la busqueda en finalizar 
+37. **grep -i -n -r [directorio donde buscaremos] -e "Expresion a buscar"** : Busca una palabra en un directorio y en los archivos de dicho direcotrio es decir navega a través de los archivos y carpetas que posea dicho directorio la "-r" indica que sea una busqueda recursiva, es decir que navega en el contenido de los archivos no en el nombre del archivo o carpeta en si
+38. **find [./ruta de carpeta/] -name *.php** : buscar los archivos que coincidan con la extension indicada
+39. **find . -name *.php** : Busca dentro del mismo directorio donde nos encontramos ya que el . hace referencia al lugar donde estamos
 40. ** **
