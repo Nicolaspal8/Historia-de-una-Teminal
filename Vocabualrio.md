@@ -13,7 +13,7 @@
 9. **PR** : Prioridad de algun proceso en ejecucion al ser habierto con el comando top
 10. **$** : en la interfaz de comandos que emula la terminal el dolar es indicativo que tenemos acceso o permiso de tipo usuario
 11. **#** el hastag indica que tenemos acceso de administrador o super usuario
-12. ** **
+12. ****
 13. ** **
 14. ** **
 15. ** **
