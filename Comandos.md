@@ -51,7 +51,7 @@ Las opciones del comando son:
 2. /V ? para terminar el proceso únicamente en la sesión.
 3. /? ? Ayuda.
 ~~~
-29. **Comandos de teclado**:
+29. **Atajos de teclado**:
 En el intérprete de la terminal Bash podemos usar las siguientes combinaciones de teclas:
 + **Ctrl+a** : lleva el cursor al inicio de la línea de comandos.
 + **Ctrl+e** : lleva el cursor al final de la línea de comandos.
