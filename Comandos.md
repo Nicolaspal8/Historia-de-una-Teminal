@@ -81,6 +81,6 @@ GNOME.
 35. **grep -i -n [Archivo dondee buscaremos] -e "Expresion a buscar"**: Lista las lineas indicando el numero de donde se encuentra nuestra busqueda
 36. **date; grep -i -n [Archivo donde buscaremos] -e "Expresion a buscar" date;** : primero ejecuta date luego la busqueda y luego date de nuevo y asi sabremos cuanto tardo la busqueda en finalizar 
 37. **grep -i -n -r [directorio donde buscaremos] -e "Expresion a buscar"** : Busca una palabra en un directorio y en los archivos de dicho direcotrio es decir navega a través de los archivos y carpetas que posea dicho directorio la "-r" indica que sea una busqueda recursiva, es decir que navega en el contenido de los archivos no en el nombre del archivo o carpeta en si
-38. **find [./ruta de carpeta/] -name *.php** : buscar los archivos que coincidan con la extension indicada
-39. **find . -name *.php** : Busca dentro del mismo directorio donde nos encontramos ya que el . hace referencia al lugar donde estamos
+38. **find [./ruta de carpeta/] -name (*).php** : buscar los archivos que coincidan con la extension indicada
+39. **find . -name (*).php** : Busca dentro del mismo directorio donde nos encontramos ya que el . hace referencia al lugar donde estamos
 40. ** **
