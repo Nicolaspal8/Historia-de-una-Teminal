@@ -14,7 +14,19 @@
 10. **$** : en la interfaz de comandos que emula la terminal el dolar es indicativo que tenemos acceso o permiso de tipo usuario
 11. **#** el hastag indica que tenemos acceso de administrador o super usuario
 12. **Archivos .csv** : 
-13. ** **
+13. **Ternas** : Son los que definen el nivel de acceso que tenemos a algun tipo de directorio o archivo compuesto por generalmente un archivo se divide en 3 ternas la primera hace referencia a los permisos del owner el segundo de los grupos y el tercero a anyone a cualquiera y cada letra osea el simbolo del permiso que tiene alguna entidad sobre algun directorio esta compuesto por valores En cuanto a terminos Binarios dichos valores sirven para determinar el permiso para cada usuario o entidad:
++ **r** : Leer tiene el Valor de = 2² -> 4
++ **w** : Escribir tiene el Valor de = 2¹ -> 2
++ **x** : Ejecutar tiene el Valor de = 2↑0 -> 1
++ **-** : Valor = 0
++ **Posibles combinaciones**
+    - **rwx : 7** --> Tiene Permisos de lectura, escritura y ejecución
+    - **rw- : 6** --> Tiene Permisos de lectura y escritura No de ejecución
+    - **r-- : 4** --> Unicamente de lectura
+    - **-w- : 2** --> Unicamente de Escritura
+    - **--x : 1** --> Unicamente de ejecucion
+    - **r-x : 5** --> Lectura y ejecución
+    - **--- : 0** --> No tiene ningun permiso
 14. ** **
 15. ** **
 16. ** **

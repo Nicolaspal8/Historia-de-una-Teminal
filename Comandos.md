@@ -84,7 +84,12 @@ GNOME.
 38. **find [./ruta de carpeta/] -name (*).php** : buscar los archivos que coincidan con la extension indicada
 39. **find . -name (*).php** : Busca dentro del mismo directorio donde nos encontramos ya que el . hace referencia al lugar donde estamos
 40. **curl [enlace de informacion en algun formato]** : Muestra por consola la informacion que contiene el enlace que le pasemos
-41. ** **
+41. **chmod** : Change Mode Es un comando para cambiar los permisos de un archivo en linux el cual recive como parametro de entrada 3 valores(que hacen referencia a las ternas) y el nombre del archivo\
+~~~
+chmod 777 -> Estas agregando todos los permisos al owner, al group y al anyone para dicho archivo
+chmod 42- -> Estas agregando unicamente permisos de lectura al usuario owner, Tambien agregas unicamente permisos de escritura al group y ningun a anyone
+~~~
+[esquema de funcionamiento de los permisos de un archivo](img/ternas.png)
 42. ** **
 43. ** **
 44. ** **
