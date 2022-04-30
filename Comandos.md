@@ -96,11 +96,32 @@ chmod 42- -> Estas agregando unicamente permisos de lectura al usuario owner, Ta
 45. **bash** : Actualiza tus configuraciones y variables de entorno para no cerrar la terminal
 46. **sudo apt install vim** : Instala un paquete en este caso el editor de texto llamado vim como super usuario que hace referencia el comando sudo
 47. **sudo** : Es un comando que te permite acceder al las caracteristicas o comandos que quieras ejecutar como super usuario es decir lo que vimos anteriormente de los permisos de las carpetas si ningun usuario tiene por ejemplo permisos de escritura o ejecucion y ejecuto nano o cat con el comando sudo primero nos pedira la contraseña de administrador y luego podremos obtener los permisos para hacer lo que queramos con algun directorio o archivo
-48. ** **
-49. ** **
-50. ** **
-51. ** **
-52. ** **
+48. **vim** : Habre el editor de texto en el cual podemos navegar con una serie de comandos distintos listados a continuación:
++ **:q[+ Enter]** : Nos permite salir de vim hay que escribir los 2 puntos luego una q y presionar enter
++ **vim [nombre de archivo a crear o ejecutar.extension]** : Primero busca dicho archivo y si no lo encuentra entonces lo crea y lo habre 
++ **Modos** : Son indicados en la parte inferior pero normal no es indicado es por defecto
+    - Normal : Es para aplicar los comandos pero no texto como en el modo inserccion
+    - Insercción : presionando la tecla i para insertar texto con ESC salimos del modo insertar o inserccion, tambien puedes entrar presionando muchos caracteres porque vim detecta que quieres escribir
++ **:w** : Es para guardar las modificaciones hechas a un archivo en el modo inserccion
++ **:edit [nombre o ruta de archivo a editar]**   
++ **h j k l** : Navegacion dentro de un archivo en vim para no ocupar las flechas h es izquierda (opcional presionar numero antes de la letra te mueve la cnatidad de lineas especificadas hacia un lugar especificado)j es abajo k arriba y l derecha
++ **:q!** : Forzar salida sin guardar cambios cuando estamos editando un archivo
++ **:wq** : Guarda y sale del modo inserccion
++ **:x** : wq es decir lo mismo que el comando anterior
++ **:set number** : Enumera las lineas del documento al igual que **:set nu**
++ **tecla 0 y p** : te pone al inicio de la linea y p al final de la linea
++ **w b e** : w = te ubica al inicio de la siguiente palabra, b al inicio de la anterior, e al final de la siguiente palabra
++ **f [mas la letra inicial de alguna palabra que deseo buscar en un archivo de texto]** : Busca dentro del archivo la palabra que comienze por la letra especificada
++ **"*"** : Presionar el asterisco al estar ubicado en una palabra nos llevara a la siguiente aparicion de esa palabra y asi tantas veces como la presionemos
++ **gg** : al presionarlo te lleva a la primera linea del documento
+    -Mayus GG te lleva al final de las lineas
+    -numero G : numero de linea mas letra g con mayus activado te lleva a la linea especificado
+
+
+49. ****
+50. **** : 
+51. **** : 
+52. ****
 53. ** **
 54. ** **
 55. ** **
