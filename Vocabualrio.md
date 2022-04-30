@@ -27,12 +27,13 @@
     - **--x : 1** --> Unicamente de ejecucion
     - **r-x : 5** --> Lectura y ejecución
     - **--- : 0** --> No tiene ningun permiso
-14. ** **
-15. ** **
-16. ** **
-17. ** **
-18. ** **
-19. ** **
+14. **Variables de Entorno** : Almacena los valores de configuracion de informacion del sistema o shell etc, del funcionamiento importante para el equipo y sirve como mapa para el sistema operativo sepa donde estan
+15. **PATH** : Almacena la ruta de los binarios del sistema para ser ejecutados al ser llamados
+16. **Binario** : Dentro del sistema operativo cuando se habla de binarios son los programas que se encargan de realizar una tarea y son ejecutados por el sistema operativo y cada vez que ejecutamos un comando como ls o pwd se encuentra en una direccion dentro de nuestros directorios y es un binario que cuando se accede a el se es ejecutado, podemos conocer la ubicacion de cada comando con el comando **wich**
+17. **Script** : Basicamente es un conjunto de codigo o secuencia de comandos, instrucciones el cual tiene una funcion en especifica a ejecutar por el sistema, en shell generalmente los scripts no se compilan, es decir que no pasan por el proceso de creacion de un archivo binario ejecutable para ser interpretado por el computador
++ Son identificados en los encabezados por #!/bin/bash (O la ruta de donde se encuentra tu shell en este caso seria bash)
+18. **Prompt** : Es el caracter o conjunto de caracteres en una linea de comandos que demuestra que esta a la espera de ordenes para ser ejecutadas 
+19. **vim** : Es un editor de texto de la linea de comandos que posen los dispositivos GNU/Linux que tambien puede ser ejecutado en windows si tienes la bash instalada
 20. ** **
 21. ** **
 22. ** **

@@ -90,12 +90,12 @@ chmod 777 -> Estas agregando todos los permisos al owner, al group y al anyone p
 chmod 42- -> Estas agregando unicamente permisos de lectura al usuario owner, Tambien agregas unicamente permisos de escritura al group y ningun a anyone
 ~~~
 [esquema de funcionamiento de los permisos de un archivo](img/ternas.png)
-42. ** **
-43. ** **
-44. ** **
-45. ** **
-46. ** **
-47. ** **
+42. **printenv o env** : Muestra las varibles de entorno del sistema
+43. **echo $[nombre de variable]** : Imprime una variable de entorno o simplemente alguna otra variable
+44. **export [nombre de variable] = $PATH** : Crea o inicializa una variable de entorno en este caso igualamos su valor al del path como ejemplo 
+45. **bash** : Actualiza tus configuraciones y variables de entorno para no cerrar la terminal
+46. **sudo apt install vim** : Instala un paquete en este caso el editor de texto llamado vim como super usuario que hace referencia el comando sudo
+47. **sudo** : Es un comando que te permite acceder al las caracteristicas o comandos que quieras ejecutar como super usuario es decir lo que vimos anteriormente de los permisos de las carpetas si ningun usuario tiene por ejemplo permisos de escritura o ejecucion y ejecuto nano o cat con el comando sudo primero nos pedira la contraseña de administrador y luego podremos obtener los permisos para hacer lo que queramos con algun directorio o archivo
 48. ** **
 49. ** **
 50. ** **
