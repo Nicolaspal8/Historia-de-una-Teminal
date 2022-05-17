@@ -34,9 +34,18 @@
 + Son identificados en los encabezados por #!/bin/bash (O la ruta de donde se encuentra tu shell en este caso seria bash)
 18. **Prompt** : Es el caracter o conjunto de caracteres en una linea de comandos que demuestra que esta a la espera de ordenes para ser ejecutadas 
 19. **vim** : Es un editor de texto de la linea de comandos que posen los dispositivos GNU/Linux que tambien puede ser ejecutado en windows si tienes la bash instalada
-20. ** **
-21. ** **
-22. ** **
+20. **ssh** : es un protocolo para transferir informacion de un computador a otro el cual funciona con un modelo Cliente Servidor, los datos son enviados de una forma mas segura con una key que solo conoce el cliente y servidor 
+21. **Telnet** : Tambien es un protocolo de comunicacion entre dos equipos pero a diferencia que es en texto plano y es mas vulnerable a ataques informaticos
+22. **Origen Cruzado en funciones potentes** : Es un tipo de seguridad que se implementa para proteger procesos significativos de un sistema o programa el cual abarca muchos otros conceptos
+    + **COEP** : Politica de incrustacion de origen cruzado\
+     es un mecanismo que permite que se puedan solicitar recursos restringidos (como por ejemplo, las tipografías) en una página web desde un dominio diferente del dominio que sirvió el primer recurso.1​ Una página web podría libremente incrustar imágenes, hojas de estilo, scripts, iframes y vídeos de origen cruzado.2​ Ciertas peticiones de origen cruzado, más notablemente peticiones Ajax, están prohibidas por defecto por la política de seguridad del mismo origen (en inglés, same-origin security policy).\
+     CORS define una forma en la cual el navegador y el servidor pueden interactuar para determinar si es seguro permitir una petición de origen cruzado.3​ Esto permite tener más libertad y funcionalidad que las peticiones de mismo origen, pero es adicionalmente más seguro que simplemente permitir todas las peticiones de origen cruzado. La especificación para CORS fue originalmente publicada como una recomendación de la W3C4​ pero dicho documento se encuentra obsoleto.5​ La especificación actual mantenida activamente que define CORS es el estándar Fetch (en inglés, Fetch Living Standard)6​ del WHATWG.
+    + **Origen** : Se refiere a la url o dominio de donde se hace una peticion
+    + **COOP** : Politica de apertura de origen cruzado
+    + **CORP** : Politica de recursos de origen cruzado
+    + **CORS** : Uso compartido de recursos de origen cruzado Quiere decir que es un concepto implementado por los navegadores en las cabeceras o headers el cual no permite que el servidor le muestre informacion a un dominio no permitido en dicho servidor, es decir un usuario esta en un dominio realiza una peticion al servidor el servidor comprueba si el dominio de origen de la peticion esta admitido en el servidor y en base a eso el navegador dice 200 ok o niega el acceso y no realiza la peticion de los datos, ya que se basa en una primera comprobacion de seguridad y luego de eso procede a hacer la peticion de los datos 
+    + **CORB** : Bloque de lectura de origen cruzado
+    + **SOP**  : Same Origin Policcy es la politica de seguridad del mismo origen es el concepto por defecto que emplean los navegadores y basicamente dice que el navegador impide que se cargen datos a un dominio diferente del cual se encuentra un usuario, es decir que los datos deben proveenir de la misma fuente, pero el problema esta en cuanto navegamos a otro sitio web y es malicioso el cual hace una peticion al servidor por ejemplo de la aplicacion del banco y lo hace a través de del dominio del banco pero con  las cookies almacenadas en nuestro navegador por ender el navegador cree que todo esta ok ya que la peticion se hace a través de la direccion de dominio presente en el servidor y se esta haciendo una peticion de origin cruzado donde el que solicita la informacion no es el dominio principal y para eso tenemo CORS
 23. ** **
 24. ** **
 25. ** **

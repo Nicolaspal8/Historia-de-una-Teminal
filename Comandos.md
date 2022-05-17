@@ -118,7 +118,7 @@ chmod 42- -> Estas agregando unicamente permisos de lectura al usuario owner, Ta
     -numero G : numero de linea mas letra g con mayus activado te lleva a la linea especificado
 
 
-49. ****
+49. **chmod +x(o r o w) arvhico.extension** Asigna permisos de ejecucion lectura o escritura a un usuario a un archivo especifico
 50. **** : 
 51. **** : 
 52. ****
