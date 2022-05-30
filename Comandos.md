@@ -75,7 +75,7 @@ GNOME.
 + **Tab** : autocompleta comandos o rutas de directorios o archivos.
 30. **kill -9 [PID]**: Elimina el proceso por una id especificada, tambien se puede hacer tecleando la tecla k al estar en el proceso de top y nos pide el PID y en base a eso podemos acabar con un proceso
 31. **ls -lh *.[extension del archivo como .php o .txt etc]** : Lista los archivos que tengan la extension indicada
-32. **grep [Archivo dondee buscaremos] -e "Expresion a buscar"**: Global Regular expresion, busca dentro de un archivo todos los que contengan la expresion indicada, y la salida o resultado tambien se puede guardar en algun tipo de archivo indicado aparte de solo mostrarlo por la consola
+32. **grep [Archivo dondee buscaremos] -e "Palabra a Buscar Sin // en Regular Expressions"**: Global Regular expresion, busca dentro de un archivo todos los que contengan la expresion indicada, y la salida o resultado tambien se puede guardar en algun tipo de archivo indicado aparte de solo mostrarlo por la consola
 33. **grep [Archivo dondee buscaremos] -e "Expresion a buscar" > [nombre de archivo nuevo.extension]** : Guarda la busqueda en un archivo, la busqueda sencible a minusculas o mayusculas pero podemos especificar eso con una expresion regular -i (insensitive)
 34. **grep -i [Archivo dondee buscaremos] -e "Expresion a buscar"** : Busqueda insensible a mayusculas o minusculas
 35. **grep -i -n [Archivo dondee buscaremos] -e "Expresion a buscar"**: Lista las lineas indicando el numero de donde se encuentra nuestra busqueda

@@ -63,4 +63,23 @@ de 1033 bytes -->
 al output aplica un cat (muestrame el contenido) --> 
 formateame el output sin espacios de manera mas legible 
 
+Otra Forma --> find . -type f ! -executable -readable -size 1033c | xargs cat | sed "s/^ *//" sustituye el comienzo de un espacio y lo que le sigue por nada 
 password --> DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+7. **Nivel 7** --> en algun lugar del servidor con user bandit7 y grupo bandit6 con un peso de 33bytes
+
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null | xargs cat 
+
+buscar a partir de la raiz --> algo con usuario bandit7 --> y grupo bandit6 --> con un peso de 33 bytes --> y solo muestrame las operaciones exitosas omite los errores --> luego el resultado de la ruta de ese archivo aplicale un cat es decir muestrame el contenido
+
+password --> HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+8.- **Nivel 8** --> Buscar dentro de un archivo junto a la palabra millionth 
+Usamos grep para buscar dentro de un archivo
+cat archivo | grep 'millionth'
+
+Otra forma--> grep -i data.txt -e "millionth" busqueda insensitive (Da igual mayuscula o minuscula)
++ Observacion --> 
+ - Al usar grep con cat no es necesario usar -e de expresion a buscar pero al usar sol grep es necesario
+ - grep acepta expresiones regulares pero sin los // es decir solo hace falta envolver todo en comillas 
+password --> cvX2JJa4CFALtqS87jk27qwqGhBM9plV

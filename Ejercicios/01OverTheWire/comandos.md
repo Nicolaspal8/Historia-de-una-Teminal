@@ -54,7 +54,59 @@ find . type -f -readable ! -executable -size 1033c | xargs cat
 ~~~
 find . type -f -readable ! -executable -size 1033c | xargs cat | xargs
 ~~~
++ Sustituir o eliminar ciertos caracteres con tr 
+~~~
+find . type -f -readable ! -executable -size 1033c | xargs cat | tr -d '\n' //Elimina saltos de linea
+tr -d '\t' //Elimina tabulador
+~~~
++ Utilizar Expresiones regulares con sed para Borrar o Remplazar cosas
+~~~
+find . type -f -readable ! -executable -size 1033c | xargs cat | sed 's/\n//g' 
+- Sustituye saltos de linea por nada de manera global
+- Sustituye tabulado --> sed 's/\t//g' 
+~~~
++ Trabaja con el output de otro comando como cat para formatear textos
+~~~
+- muestrame la primera linea --> cat C:\Users\archivo | head -n 1
+- muestrame la 2 ultimas lineas --> cat C:\Users\archivo | tail -n 2
+- muestrame la linea 2 --> cat C:\Users\archivo | awk 'NR==2'
+
+- sustituye la primera palabra en el output de un archivo de la primera linea 
+--> cat C:\Users\archivo | head -n 1 | sed 's/Caracteres/NuevosCaracteres/'
+
+- sustituye todas las palabras es decir de manera global 
+--> cat C:\Users\archivo | head -n 1 | sed 's/Caracteres/NuevosCaracteres/g'
+
+- busca con grep dentro de un archivo las lineas que "Empiezen" con una palabra o caracter en especifico 
+--> cat C:\Users\archivo | grep "^palabra"
+
+- sustituye una palabra o caracter y lo que le sigue por otra 
+--> find . -type f ! -executable -readable -size 1033c | xargs cat | sed "s/^ *//" //Espacios sustituidos y lo que sigue por nada
+
+- busca palabras que empiezen en un criterio y terminen en otro 
+--> grep "/^hola$/"
+
+- elimina todo lo que comienze con espacio y termine en nada o espacio 
+--> find . -type f ! -executable -readable -size 1033c | xargs cat | sed "/^\s*$/d"
+
+- dime la linea donde esta cierta palabra o caracter dentro de un texto 
+--> grep "/^hola$/" -n
+
+- muestrame lo que hay en una linea en especifico
+--> awk 'NR==1923'
+
+- muestrame todo a partir de la raiz que tenga un usuario y un grupo especifico y solo muestrame las operaciones exitosas y solo los que pesen 33 bytes
+--> find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+~~~
+
 9. **CTRL + R** --> Es un tipo de buscador de los comandos que ya escribimos y nos muestra los posibles autocompletados al lado derecho de la linea de comandos
 
+10. **disown o disown -a** --> Independizar procesos para que al cerrar la consola no se cierre lo que no quieres y no dependa de esa consola en ejecucion y cree su propio espacio de ejecucion 
 
+11. **Cuentame las lineas de un archivo**
+--> cat archivo | wc -l
+- Cuentame los caracteres --> cat archivo | wc -c
+
+
+12. 
 
