@@ -46,7 +46,14 @@ find . type -f ! -readable ! -writable ! -executable
 ~~~
 find . type -f -readable ! -executable -size 1033c //Para decir que son bytes especificar una c
 ~~~
-
++ Aplicar cat a una lista de archivos devueltos en el comando anterior
+~~~
+find . type -f -readable ! -executable -size 1033c | xargs cat
+~~~
++ Aplicar un formateo de outpu con xargs en este caso el archivo si tiene muchos espacios lo formatea y lo entrega limpio solo con el contenido leible 
+~~~
+find . type -f -readable ! -executable -size 1033c | xargs cat | xargs
+~~~
 9. **CTRL + R** --> Es un tipo de buscador de los comandos que ya escribimos y nos muestra los posibles autocompletados al lado derecho de la linea de comandos
 
 

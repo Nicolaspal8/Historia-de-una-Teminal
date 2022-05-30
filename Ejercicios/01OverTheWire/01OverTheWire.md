@@ -53,3 +53,14 @@ password --> koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 
 
 6. **Nivel 6** --> Fichero humanamente legible, 1033bytes, no ejecutable
+find . -type f -readable ! -executable -size 1033c | xargs cat | xargs
+busca --> 
+directorio actual --> 
+tipo file --> 
+archivos leibles --> 
+no ejecutables --> 
+de 1033 bytes --> 
+al output aplica un cat (muestrame el contenido) --> 
+formateame el output sin espacios de manera mas legible 
+
+password --> DXjZPULLxYr17uwoI01bNLQbtFemEgo7
