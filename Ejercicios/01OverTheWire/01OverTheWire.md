@@ -75,11 +75,23 @@ buscar a partir de la raiz --> algo con usuario bandit7 --> y grupo bandit6 --> 
 password --> HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
 
 8.- **Nivel 8** --> Buscar dentro de un archivo junto a la palabra millionth 
-Usamos grep para buscar dentro de un archivo
+Usamos grep para buscar dentro de un archivo\
 cat archivo | grep 'millionth'
 
-Otra forma--> grep -i data.txt -e "millionth" busqueda insensitive (Da igual mayuscula o minuscula)
-+ Observacion --> 
+Otra forma--> 
+- grep -i data.txt -e "millionth" busqueda insensitive (Da igual mayuscula o minuscula)
+- grep '/millionth/' data.txt
+- awk '/millionth/' data.txt
+Observacion --> 
  - Al usar grep con cat no es necesario usar -e de expresion a buscar pero al usar sol grep es necesario
- - grep acepta expresiones regulares pero sin los // es decir solo hace falta envolver todo en comillas 
+ - grep acepta expresiones regulares pero sin los // es decir solo hace falta envolver todo en comillas
+ - La mas optima es usar solo grep sin cat asi consumimos menos recursos
 password --> cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
+9. **Nivel 9** --> La contraseña es la unica que no se repite en un archivo lleno de caracteres
+
+--> sort archivo.txt  | uniq -u
+
+
+
+password --> UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR

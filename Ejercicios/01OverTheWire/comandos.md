@@ -108,5 +108,26 @@ find . type -f -readable ! -executable -size 1033c | xargs cat | sed 's/\n//g'
 - Cuentame los caracteres --> cat archivo | wc -c
 
 
-12. 
+12. **awk**
+- muestrame el argumento 1 --> awk '{print $1}
+- muestrame el argumento 2 --> awk '{print $2}
+- muestrame el ultimo elemento de la linea donde estoy 
+--> awk '/millionth/' data.txt | awk 'NF{print $NF}'
+- revierte una cadena y muestrame la primera cadena
+--> awk '/millionth/' data.txt | rev | '{print $1}'
+
+
+13. **cut**
+- muestrame lo que este a la izquierda del primer caracter que encuentres 
+--> cut archivo.txt -d 'caracter' -f 1
+--> cut archivo.txt -d 'caracter' -f 2 //A la derecha
+
+14. **sort uniq**
+- Uniq necesita previamente un ordenamiento para trabajar sobre un archivo o palabras por eso va en conjunto de sort
+
+- ordena alfabetimacemente un archivo
+--> sort archivo 
+- ordename y muestrame solo las palabras o secuencia de caracteres unicos
+--> sort archivo.txt  | uniq -u
+
 
