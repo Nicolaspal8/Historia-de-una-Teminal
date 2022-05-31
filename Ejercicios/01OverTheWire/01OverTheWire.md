@@ -92,6 +92,82 @@ password --> cvX2JJa4CFALtqS87jk27qwqGhBM9plV
 
 --> sort archivo.txt  | uniq -u
 
-
-
+- Observaciones --> Utilizamos sort para luego trabajar con uniq -u que recibe un archivo o grupo de caracteres ordenados y asi puede trabajar sobre el, uniq posee mas herramientas las cuales se pueden ver con man uniq o uniq --help o en la documentacion de coreutils de gnu en la pagina web
 password --> UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+
+10. **Nivel 10** --> La contraseña esta antecedida de los unicos caracteres legibles como signo de = 
+
+- Primero hay que extraer los caracteres legibles del archivo con strings y luego sobre el output podremos aplicar un script de busqueda como grep o awk y como nos dicen que esta precedido de signos == osea mas de uno aplicamos ese parametro de busqueda a grep
+
+strings archivo.txt | grep "==="
+Otra Forma de hacer aplicando lo que hemos aprendido hasta aqui en base al output y a su formato que es este
+~~~
+========== the*2i"4
+========== password
+Z)========== is
+&========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+~~~
+--> strings data.txt | grep "===" | tail -n 1 | cut -d ' ' -f 2 
+muestrame los caracteres imprimibles --> buscame los que contengan === --> muestrame la ultima linea --> formateame el texto a partir del primer espacio y muestrame el conjunto que sigue
+**Ejemplo Brutal**
+~~~
+contador=1; strings data.txt | grep "===" | while read line; do echo "Linea $contador: $line";let cont
+ador+=1; done
+//Output -->
+Linea 1: ========== the*2i"4
+Linea 2: ========== password
+Linea 3: Z)========== is
+Linea 4: &========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+~~~
+password --> truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+
+11. **Nivel 11** --> La contraseña esta encriptada con base64
+- Si vemos en el comando de informacion base64 --help veremos que utilizando base64 -d (decode) file_name.extension decodificaremos el archivo
+
+--> base64 -d data.txt
+
+password --> IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+12. **Nivel 12** -->
+
+13. **Nivel 13** -->
+
+14. **Nivel 14** -->
+
+15. **Nivel 15** -->
+
+16. **Nivel 16** -->
+
+17. **Nivel 17** -->
+
+18. **Nivel 18** -->
+
+19. **Nivel 19** -->
+
+20. **Nivel 20** -->
+
+21. **Nivel 21** -->
+
+22. **Nivel 22** -->
+
+23. **Nivel 23** -->
+
+24. **Nivel 24** -->
+
+25. **Nivel 25** -->
+
+26. **Nivel 26** -->
+
+27. **Nivel 27** -->
+
+28. **Nivel 28** -->
+
+29. **Nivel 29** -->
+
+30. **Nivel 30** -->
+
+31. **Nivel 31** -->
+
+32. **Nivel 32** -->
+
+33. **Nivel 33** -->

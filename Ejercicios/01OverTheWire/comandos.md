@@ -130,4 +130,38 @@ find . type -f -readable ! -executable -size 1033c | xargs cat | sed 's/\n//g'
 - ordename y muestrame solo las palabras o secuencia de caracteres unicos
 --> sort archivo.txt  | uniq -u
 
+15. **strings**
+- Lista los caracteres imprimibles y es bueno para buscar dentro de los caracteres reconocibles de un archivo
 
+--> strings archivo.txt
+- otro ejemplo seria usar el resultado en conjunto con grep
+--> strings archivo.txt | grep "caracteres"
+
+16. **!$**
+- Hace referencia al ultimo archivo trabajado o directorio y en base a eso puedes trabajar con el
+
+17. **Bucle en bash**
+- Una forma de crear scripts es crear un archivo con el codigo y luego ejecutar el archivo 
+a nivel de archivo -->
+~~~
+contador=1 #En bash al declarar una variable hay que escribirla pegada sin espacio entre los operando
+
+while read line; do 
+        echo "Linea $contador: $line"
+        let contador+=1 
+done < /ruta del archivo donde se aplicara el script
+~~~
+- a nivel de CLI (Interfaz de Linea de comandos) con un ejemplo del ejercicio -->
+~~~
+contador=1; strings data.txt  | grep "===" | while read line; do echo "Linea $contador $line; contador+=1; done
+~~~
+
+18. **tr** 
+- Similar a sed permite eliminar o sustituir textos, a diferencia de sed la expresion se aplica automaticamente a todo si no le decimos lo contrario en sed habria que anteponer una s en la regular expresion de sustitucion y luego una g que se haga de manera global
+**Otro punto importante es que tr trabaja por caracter como si decimos tr 'root' 'nueva' todas las r la sustituye por n la primera o por u y asi sucesivamente
+
+
+- sustituye los espacios por saltos de linea --> archivo tr ' ' '\n'
+- hace una rotacion a partir de la posicion 13 incluyendo minusculas y mayusculas
+--> cat archivo.txt | tr '[G-ZA-Fg-za-f]' '[T-ZA-St-za-s]'
+abcdefghijqlmnopqrstuvwxyz
