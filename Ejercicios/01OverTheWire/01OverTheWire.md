@@ -128,9 +128,35 @@ password --> truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
 
 password --> IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 
-12. **Nivel 12** -->
+12. **Nivel 12** --> La contraseña esta en un archivo de texto al cual hay que aplicarle una rotacion de 13 posiciones incluyendo minusculas y mayusculas
+- Para leer el archivo usaremos cat y en conjunto usaremos tr
+- Vemos que el archivo empieza por la letra G luego en la rotacion contamos cual es el caracter luego de 13 posiciones en el alfabeto americano
+--> cat data.txt | tr '[G-ZA-Fg-za-f]' '[T-ZA-St-za-s]' 
 
-13. **Nivel 13** -->
+
+password --> 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+
+13. **Nivel 13** --> Contraseña en archivo comprimido multiples veces en hexadecimal y luego usando diversos compresores
+
+- como el archivo esta comprimido varias veces y no sabemos en especifico a que tipo de archivo resultara la descompresion final o en el transcurso entonces usaremos un descompresor universal llamado 7z juto con el parametro l que hara una vista previa de la ejecucion de descompresion 
+
+- muestrame la vista previa de lo que harás si descomprimieras un archivo
+--> 7z l archivo.gzip
+- descomprime un archivo 
+--> 7z x archivo
+
+- como son multiples archivos crearemos un scrip en bash para que a través de una bucle descomprima todas las veces que sea necesario
+
+touch descompresor.sh
+chmod +x descompresor.sh o !$ (que toma en cuenta el ultimo archivo manipulado)
+nano descompresor.sh
+
+
+
+- cat data.txt | xxd -r 
+ejemplos --> xxd de un archivo lo transforma a hexadecimal y si le aplico un xxd -r lo reviero a forma anterior 
+password --> 
 
 14. **Nivel 14** -->
 

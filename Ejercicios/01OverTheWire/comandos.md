@@ -165,3 +165,23 @@ contador=1; strings data.txt  | grep "===" | while read line; do echo "Linea $co
 - hace una rotacion a partir de la posicion 13 incluyendo minusculas y mayusculas
 --> cat archivo.txt | tr '[G-ZA-Fg-za-f]' '[T-ZA-St-za-s]'
 abcdefghijqlmnopqrstuvwxyz
+
+19. **xxd**
+- Permite trabajar con formatos de archivos hexadecimales y transformarlos o revertirlos
+
+- crea un archivo hexadecimal a partir de otro --> 
+a partir de un archivo puedes crear un hexadecimal xxd archiv_normal > nuevo_opcional(si no lo imprime por consola y no guarda el resultado del hexadecimal creado)
+
+- a partir de un echo puedes crear un hexadecimal y guardarlo en otro archivo nuevo y volverlo a comprimir
+--> echo "contenido del archivo"  | xxd > nuevo archivo
+
+- puedes comprimir varias veces un archivo a hexadecimal y luego hacer lo mismo reversivamente para optener el resultado inicial 
+--> xxd archivo | xxd | xxd > archivo_final
+
+- transforma un archivo normal y solo muestrame los bytes sin los hexadecimales (ojo que si quiero aplicar este comando xxd -ps sobre un archivo ya hexadecimal debo primero aplicar un -r tantas veces como sea necesario y luego usar el -ps ya que esto primero lo pasa a hexadecimal y luego extrae solo los bytes es decir no formatea por si solo un archivo ya hexadecimal extrayendo los datos) 
+--> xxd -ps archivo_normal > resultado (es opcional guardar el resultado si no solo lo mostrara por consola) 
+
+- si el archivo ya es un hexadecimal --> cat archivo | xxd -r  | xxd -ps 
+
+
+

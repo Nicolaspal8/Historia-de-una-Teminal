@@ -119,8 +119,8 @@ chmod 42- -> Estas agregando unicamente permisos de lectura al usuario owner, Ta
 
 
 49. **chmod +x(o r o w) arvhico.extension** Asigna permisos de ejecucion lectura o escritura a un usuario a un archivo especifico
-50. **** : 
-51. **** : 
+50. **rm -f *** : Borra todo los archivos dentro de un directorio 
+51. **wich $SHELL** : mostrar donde esta almacenada la shell que estamos usando 
 52. ****
 53. ** **
 54. ** **
