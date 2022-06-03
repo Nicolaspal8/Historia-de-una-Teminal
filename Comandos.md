@@ -121,8 +121,8 @@ chmod 42- -> Estas agregando unicamente permisos de lectura al usuario owner, Ta
 49. **chmod +x(o r o w) arvhico.extension** Asigna permisos de ejecucion lectura o escritura a un usuario a un archivo especifico
 50. **rm -f *** : Borra todo los archivos dentro de un directorio 
 51. **wich $SHELL** : mostrar donde esta almacenada la shell que estamos usando 
-52. ****
-53. ** **
+52. **sudo reboot** : Reinicio Reinicia el sistema
+53. **sudo dpkg-reconfigure locales** : Cambia el idioma del sistmea y en teclado o keyboard en el lado de distribucion puedes configurar la entrada del teclado
 54. ** **
 55. ** **
 56. ** **

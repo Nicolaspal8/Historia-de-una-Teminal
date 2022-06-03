@@ -183,5 +183,17 @@ a partir de un archivo puedes crear un hexadecimal xxd archiv_normal > nuevo_opc
 
 - si el archivo ya es un hexadecimal --> cat archivo | xxd -r  | xxd -ps 
 
+19. **grep**
+- Es un buscador dentro de textos 
+
+- seleccioname las 2 lineas despues de donde encuentres un mach
+--> grep "Palabra" archivo.txt -A 2
+- 2 Lineas antes
+--> grep "Palabra" archivo.txt -B 2
+- 2 linea arriba y una abajo
+--> grep "Palabra" archivo.txt -C 2
+
+
+
 
 
