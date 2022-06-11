@@ -194,6 +194,14 @@ a partir de un archivo puedes crear un hexadecimal xxd archiv_normal > nuevo_opc
 --> grep "Palabra" archivo.txt -C 2
 
 
+20. **&& ||** 
+- Operadores si el primero se cumple entonces ejecurara el segundo o si el primero no se cumple entonces ejecutara el segundo ejemplo
+echo "hola" && echo "Se cumplio"
+cat archivo_no_existe || echo "operador or"
 
+21. **echo $?**
+- Nos muestra el codigo de estado de la ultima operacion ejecutada
+
+22. ** ** : 
 
 

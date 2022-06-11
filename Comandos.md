@@ -123,7 +123,7 @@ chmod 42- -> Estas agregando unicamente permisos de lectura al usuario owner, Ta
 51. **wich $SHELL** : mostrar donde esta almacenada la shell que estamos usando 
 52. **sudo reboot** : Reinicio Reinicia el sistema
 53. **sudo dpkg-reconfigure locales** : Cambia el idioma del sistmea y en teclado o keyboard en el lado de distribucion puedes configurar la entrada del teclado
-54. ** **
+54. **curl** : Permite realizar consultas en el servidor ya sea web o local ejemplo --> curl http://localhost:3000/usuarios?rut=12345
 55. ** **
 56. ** **
 57. ** **

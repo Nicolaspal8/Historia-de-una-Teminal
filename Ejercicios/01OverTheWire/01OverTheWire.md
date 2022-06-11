@@ -150,13 +150,33 @@ password --> 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 
 touch descompresor.sh
 chmod +x descompresor.sh o !$ (que toma en cuenta el ultimo archivo manipulado)
-nano descompresor.sh
+nano descompresor.sh para escribir en el archivo
+ahora escribiremos el siguiente codigo
+~~~
+#!/bin/bash #Para indicar que shell usaremos
 
+nombre_descomprimido=$(7z l data.hex | grep "Name" -A 2 | tail -n 1 | awk 'NF{print $NF}' ) #Es para sacar el nombre si esque el archivo se puede descomprimir
+
+7z x data.hex > /dev/null 2>&1 #Redirijimos los errores al dev null para que no se impriman en consola
+
+while true; do
+    7z l $nombre_descomprimido > /dev/null 2>&1 #Redirijimos errores o algun output en consola para que no molesten en cada iteracion
+    if [ "$(echo $?)" == "0" ]; then #Preguntamos si el codigo de estado del comando ejecutado anteriormente es diferente de exitoso (0) porque eso significara que ya no se puede descomprimir
+        descomprimido_siguiente=$(7z l $nombre_descomprimido | grep "Name" -A 2 | tail -n 1 | awk 'NF{print $NF}' )
+        7z x $nombre_descomprimido > /dev/null 2>&1 && nombre_descomprimido=$descomprimido_siguiente #Hacemos esto para que si se ejecuta el primer comando entonces el segundo dira que ahora estara trabajando sobre el siguiente archivo generado al descomprimirser el anterior
+    else
+        cat $nombre_descomprimido
+        exit 1 #Aplicamos un codigo de estado diferente de 0 para que no entre de nuevo en el bucle y este termine
+    fi
+done
+~~~
+- Usaremos una herramienta (7z descompresor universal) la cual la podemos instalar en linux con el siguiente comando --> sudo apt-get install p7zip-full p7zip-rar
+- La sintaxis en bash debe ser perfecta por ejemplo acabo de tener un error de 15 minutos que era porque luego del if debe haber un espacio y luego la condicion 
 
 
 - cat data.txt | xxd -r 
 ejemplos --> xxd de un archivo lo transforma a hexadecimal y si le aplico un xxd -r lo reviero a forma anterior 
-password --> 
+password --> 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 
 14. **Nivel 14** -->
 
